@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Từ điển</title>
+</head>
+<body>
+<script>
+let vN = ["chuối", "táo", "cam", "bút", "bút chì", "sách"];
+let enG = ["banana", "apple", "orange", "pen", "pencil", "book"];
+let ask = prompt('Nhập từ cần dịch');
+let result ;
+if (vN.indexOf(ask) !== -1) {
+    result = enG[vN.indexOf(ask)];
+}else if (enG.indexOf(ask) !==-1) {
+    result = vN[enG.indexOf(ask)];
+}else {
+    result = 'từ không có trong từ điển';
+}
+alert(result);
+</script>
+</body>
+</html>
