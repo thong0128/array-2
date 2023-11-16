@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Sử dụng các hàm có sẵn của mảng</title>
+</head>
+<body>
+<script>
+    // Bài 1
+    let myColor = ["Red", "Green", "White", "Black"];
+    alert(myColor.toString()) //Cách 1
+    alert(myColor.join()) //Cách 2
+
+    // Bài 2
+    const num=window.prompt();
+    const str2 = num.toString();
+    const result2 = [str2[0]];
+
+    for(let x=1; x<str2.length; x++)
+    {
+        if((str2[x-1]%2 === 0)&&(str2[x]%2 === 0))
+        {
+            result2.push('-', str2[x]);
+        }
+        else
+        {
+            result2.push(str2[x]);
+        }
+    }
+    console.log(result2.join(''));
+
+    // Bài 3
+    let str = 'The Quick Brown Fox';
+    let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    let result = [];
+
+    for(let x=0; x<str.length; x++)
+    {
+        if(UPPER.indexOf(str[x]) !== -1)
+        {
+            result.push(str[x].toLowerCase());
+        }
+        else if(LOWER.indexOf(str[x]) !== -1)
+        {
+            result.push(str[x].toUpperCase());
+        }
+        else
+        {
+            result.push(str[x]);
+        }
+    }
+    console.log(result.join(''));
+</script>
+</body>
+</html>
