@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[*Bài tập] Ứng dụng vui Faking Textarea on Typing</title>
+    <script>
+        let a=['T','Ô','I',' ','L','À',' ','M','Ộ','T',' ','Đ','Ứ','A',' ','N','G','Ố','C','!','!'];
+        let n="";
+        function typeTextarea(){
+            let t = document.f.txt.value;
+            let j = t.length;
+            if(j > 0) {
+                for(let i=0; i<j; i++) {
+                    n = n + a[i];
+                    if(i == a.length) {
+                        document.f.txt.value = "";
+                        n = "";
+                    }
+                }
+            }
+            document.f.txt.value = n;
+            n="";
+            setTimeout("typeTextarea()", 5);
+            //return false;
+        }
+    </script>
+</head>
+<body>
+<div style="text-align: center;">
+    <h2>Type anthing slowly</h2>
+    <form name="f">
+        <textarea name="txt" cols="40" rows="10" onkeydown="typeTextarea();"></textarea>
+    </form>
+</div>
+</body>
+</html>
